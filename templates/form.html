@@ -1,86 +1,121 @@
 <!doctype html>
+<html >
 <head>
-<title>RANDOM FOREST</title>
-{% if name %}
-  <h1>Hello {{ name }}!</h1>
-{% else %}
-  <h1>this is the form</h1>
-{% endif %}
+  <meta name="author" content=
+  "Stephen Kennedy-Clark" />
+
+  <title>RANDOM FOREST</title>
 </head>
-<body id="main_body" >
-	
 
-	<div id="form_container">
-	
-		<h1><a>Untitled Form</a></h1>
-		<form id="random_forest_form"  method="POST" action="/">
-					<div class="form_description">
-			<h2>Untitled Form</h2>
-			<p>This is your form description. Click here to edit.</p>
-		</div>						
-			<ul >
-			
-					<li id="li_1" >
-		<label class="description" for="element_1">VAR1 </label>
-		<div>
-			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_2" >
-		<label class="description" for="element_2">VAR2 </label>
-		<div>
-			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_3" >
-		<label class="description" for="element_3">VAR3 </label>
-		<div>
-			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_4" >
-		<label class="description" for="element_4">VAR4 </label>
-		<div>
-			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_5" >
-		<label class="description" for="element_5">VAR5 </label>
-		<div>
-			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_6" >
-		<label class="description" for="element_6">VAR6 </label>
-		<div>
-			<input id="element_6" name="element_6" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_7" >
-		<label class="description" for="element_7">VAR7 </label>
-		<div>
-			<input id="element_7" name="element_7" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_8" >
-		<label class="description" for="element_8">VAR8 </label>
-		<div>
-			<input id="element_8" name="element_8" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_9" >
-		<label class="description" for="element_9">VAR9 </label>
-		<div>
-			<input id="element_9" name="element_9" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_10" >
-		<label class="description" for="element_10">VAR10 </label>
-		<div>
-			<input id="element_10" name="element_10" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>
-			
-					<li class="buttons">
-			    <input type="hidden" name="form_id" value="30571" />
-			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-		</li>
-			</ul>
-		</form>	
+<body id="main_body">
+  <div id="form_container">
+    <fieldset>
+        <legend>Provide values for VAR1-VAR10</legend>
 
-	</div>
+    <form id="random_forest_form" method="post" action="/">
+      <div class="form_description">
+        <h2>Untitled Form</h2>
 
-	</body>
+        <p>This is your form description. Click here to edit.</p>
+      </div>
+
+      <ul>
+        <li id="li_1">
+          <label class="description" for="element_1">VAR1</label>
+
+          <div>
+            <input id="element_1" name="element_1" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_2">
+          <label class="description" for="element_2">VAR2</label>
+
+          <div>
+            <input id="element_2" name="element_2" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_3">
+          <label class="description" for="element_3">VAR3</label>
+
+          <div>
+            <input id="element_3" name="element_3" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_4">
+          <label class="description" for="element_4">VAR4</label>
+
+          <div>
+            <input id="element_4" name="element_4" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_5">
+          <label class="description" for="element_5">VAR5</label>
+
+          <div>
+            <input id="element_5" name="element_5" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_6">
+          <label class="description" for="element_6">VAR6</label>
+
+          <div>
+            <input id="element_6" name="element_6" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_7">
+          <label class="description" for="element_7">VAR7</label>
+
+          <div>
+            <input id="element_7" name="element_7" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_8">
+          <label class="description" for="element_8">VAR8</label>
+
+          <div>
+            <input id="element_8" name="element_8" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_9">
+          <label class="description" for="element_9">VAR9</label>
+
+          <div>
+            <input id="element_9" name="element_9" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li id="li_10">
+          <label class="description" for="element_10">VAR10</label>
+
+          <div>
+            <input id="element_10" name="element_10" class="element text medium" type=
+            "text" maxlength="255" value="" />
+          </div>
+        </li>
+
+        <li class="buttons"><input type="hidden" name="form_id" value="30571" />
+        <input id="saveForm" class="button_text" type="submit" name="submit" value=
+        "Submit" /></li>
+      </ul>
+    </form>
+     <fieldset>
+  </div>
+</body>
 </html>
