@@ -1,0 +1,9 @@
+aws ec2 run-instances --image-id ami-162c2575 --placement AvailabilityZone=ap-southeast-2a --count 1 --instance-type t2.micro --key-name MyEC2Key --user-data file://awsscript.sh --security-groups Web-DMZ  --iam-instance-profile Name=S3-Admin-Access
+
+aws s3 cp create_db.SQL s3://mq-random-forest/create_db.SQL
+
+aws s3 cp app.py s3://mq-random-forest/app.py
+
+aws ec2 describe-instances | grep PublicIpAddress
+
+ssh -i ~/.ssh/MyEC2Key.pem ec2-user@
