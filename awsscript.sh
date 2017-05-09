@@ -8,6 +8,7 @@ pip install Flask
 service mysqld start
 chkconfig mysqld on
 
+cd /home/ec2-user
 git clone https://github.com/stephenclark/randomforest.git 
 
 #aws s3 cp s3://mq-random-forest/table1.csv /home/ec2-user/table1.csv
