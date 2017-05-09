@@ -42,14 +42,14 @@ CREATE TABLE table2 (
 );
 
  
-LOAD DATA LOCAL INFILE '/home/ec2-user/table1.csv'
+LOAD DATA LOCAL INFILE '/home/ec2-user/randomforest/table1.csv'
 INTO TABLE table1
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
-LOAD DATA LOCAL INFILE '/home/ec2-user/table2.csv'
+LOAD DATA LOCAL INFILE '/home/ec2-user/randomforest/table2.csv'
 INTO TABLE table2
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
