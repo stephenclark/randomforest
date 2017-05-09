@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        return show_the_results)
+        return show_the_result()
     else:
         return show_the_form()
   
