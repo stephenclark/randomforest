@@ -31,12 +31,13 @@ git clone https://github.com/stephenclark/randomforest.git
 mysql  -u root -pveryrandompassword < randomforest/create_db.SQL
 
 echo "Train the random forest model"
-python randomforest/train_rf_model.py
+randomforest/
+python train_rf_model.py
 
 # Copy startup logs to home to make for easy debugging
 cp /var/log/cloud-init-output.log . 
 
 #start the website. Should be listening on port 80
-python randomforest/app.py
+python app.py
 
 

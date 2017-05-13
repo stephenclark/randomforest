@@ -1,120 +1,18 @@
 <!doctype html>
-<html >
-<head>
-  <meta name="author" content=
-  "Stephen Kennedy-Clark" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <title>RANDOM FOREST</title>
-</head>
-
-<body id="main_body" class="dark_matter">
-  <div id="form_container">
-    <fieldset>
-        <legend>RANDOM FOREST</legend>
-
-    <form id="random_forest_form" method="post" action="/">
-      <div class="dark_matter">
-        <h3>Provide values for VAR1-VAR10</h3>
-      </div>
-
-      <ul>
-        <li id="li_1">
-          <label class="dark_matter" for="element_1">VAR1</label>
-
-          <div>
-            <input id="element_1" name="element_1" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_2">
-          <label class="dark_matter" for="element_2">VAR2</label>
-
-          <div>
-            <input id="element_2" name="element_2" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_3">
-          <label class="dark_matter" for="element_3">VAR3</label>
-
-          <div>
-            <input id="element_3" name="element_3" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_4">
-          <label class="dark_matter" for="element_4">VAR4</label>
-
-          <div>
-            <input id="element_4" name="element_4" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_5">
-          <label class="dark_matter" for="element_5">VAR5</label>
-
-          <div>
-            <input id="element_5" name="element_5" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_6">
-          <label class="dark_matter" for="element_6">VAR6</label>
-
-          <div>
-            <input id="element_6" name="element_6" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_7">
-          <label class="dark_matter" for="element_7">VAR7</label>
-
-          <div>
-            <input id="element_7" name="element_7" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_8">
-          <label class="dark_matter" for="element_8">VAR8</label>
-
-          <div>
-            <input id="element_8" name="element_8" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_9">
-          <label class="dark_matter" for="element_9">VAR9</label>
-
-          <div>
-            <input id="element_9" name="element_9" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_10">
-          <label class="dark_matter" for="element_10">VAR10</label>
-
-          <div>
-            <input id="element_10" name="element_10" class="dark_matter" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-        <br />       
-        <input id="saveForm" class="dark_matter" type="submit" name="submit" value=
-        "Submit" /></li>
-      </ul>
-    </form>
-     <fieldset> <legend class="dark_matter" >Results</legend>
-     </fieldset>
-     </fieldset>
-  </div>
-</body>
+<html>
+   <body>
+   
+      <table border = 1>
+         {% for key, value in result.iteritems() %}
+         
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+            
+         {% endfor %}
+      </table>
+      
+   </body>
 </html>
+{% #form_vars = ["VAR1", " VAR2", "VAR3", "VAR4", "VAR5", "VAR6", "VAR7", "VAR8", "VAR9", "VAR10"] %}       

@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 dbconn = pymysql.connect(host='localhost', port=3306, user='root', passwd='veryrandompassword', db='mq_random_forest')
 
 
-sql= "SELECT table1.VAR1,  table1.VAR2, table1.VAR3, table2.VAR4, table2.VAR5, table2.VAR6, \
+sql = "SELECT table1.VAR1,  table1.VAR2, table1.VAR3, table2.VAR4, table2.VAR5, table2.VAR6, \
               table2.VAR7, table2.VAR8, table2.VAR9, table2.VAR10, table1.OUTCOME \
         FROM table1 JOIN table2 ON table1.ID = table2.ID;"
 
