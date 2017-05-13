@@ -1,11 +1,23 @@
 #!/bin/bash
 echo "get the things we need"
-yum update -y
+#yum update -y
 #pip install --upgrade pip
+#sudo easy_install pip
 
+
+
+yum install update -y
+yum groupinstall "Development Tools" -y
+yum install python-devel libpng-devel freetype-devel 
+#the last two are necessary for pip to run without failing with error 'Command "python setup.py egg_info" failed with error code 1'
+pip install matplotlib pandas #Finally it works!
 yum -y install  mysql mysql-server git
-pip install Flask
-pip install flask-mysqldb
+pip install Flask pymysql
+
+
+
+
+
 
 echo "start the required services"
 service mysqld start

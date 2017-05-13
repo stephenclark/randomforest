@@ -10,6 +10,8 @@
 
 -- DROP USER  'randomForestUser'@'localhost';
 -- DROP DATABASE IF EXISTS mq_random_forest;
+-- mq-random-forest.c7vffwba7rx2.ap-southeast-2.rds.amazonaws.com:3306
+-- mysql -h mq-random-forest.c7vffwba7rx2.ap-southeast-2.rds.amazonaws.com -P 3306 -u randomForestUser -pveryrandompassword
 
 CREATE DATABASE  mq_random_forest;
 CREATE USER 'randomForestUser'@'localhost' IDENTIFIED BY 'veryrandompassword';
@@ -42,14 +44,14 @@ CREATE TABLE table2 (
 );
 
  
-LOAD DATA LOCAL INFILE '/home/ubuntu/randomforest/table1.csv'
+LOAD DATA LOCAL INFILE 'table1.csv'
 INTO TABLE table1
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 
-LOAD DATA LOCAL INFILE '/home/ubuntu/randomforest/table2.csv'
+LOAD DATA LOCAL INFILE 'table2.csv'
 INTO TABLE table2
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
