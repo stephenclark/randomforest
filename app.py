@@ -65,7 +65,8 @@ def show_the_result():
                 this_result = int(result[value])
 
             a.append(this_result)
-
+        
+        #TODO: remove following line and lines 7 and 8
         print(a, file=sys.stderr)
 
         filename='finalized_model.sav'
