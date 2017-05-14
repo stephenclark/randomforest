@@ -1,19 +1,36 @@
 <!doctype html>
-<html>
-   <body>
-   
-      <table border = 1>
-          {{result['VAR1']}}
-         {% for key, value in result.iteritems() %}
-         
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-            
-         {% endfor %}
-      </table>
+<html >
+<head>
+  <meta name="author" content=
+  "Stephen Kennedy-Clark" />
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <title>RANDOM FOREST</title>
+</head>
+
+<body id="main_body">
+  <h1 class="title">Random Forest</h1>
+  <div id="form_container">
+    <section class="container">
+        <!-- <legend>RANDOM FOREST</legend> -->
+
+    <form id="random_forest_form" method="post" action="/">
+      <div class="form_description">
+        <h3>Provide values for VAR1-VAR10</h3>
+      </div>
+
       
-   </body>
+        {% for value in form_vars %}
+        <div>
+          <label class="description" for="{{value}}">{{value}}</label>
+          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="{{result['VAR1']}}" />
+        </div>
+        {% endfor %}
+
+       <br />
+       <input id="saveForm" class="button_text"  rform='random_forest_form' type="submit" value="Submit" /></li>
+      
+    </form>
+     </section>
+  </div>
+</body>
 </html>
-   
