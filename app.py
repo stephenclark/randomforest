@@ -19,9 +19,15 @@ def show_the_form():
 #   As this is a POST return - show results and pre populate the form  
 def show_the_result():
     result = request.form
+    err_message = "This is where the error message goes<br >"
+
+    for value in form_vars:
+        if len(result[value]) == 0:
+            err_message += "Please provide a value for " + result[value] + "<br />"
+    
     model_result = [0, 0.92]
 
-    return render_template("result.html",result = result, form_vars = form_vars, model_result = model_result)
+    return render_template("result.html",result = result, form_vars = form_vars, model_result = model_result, err_message=err_message)
 
 
 
