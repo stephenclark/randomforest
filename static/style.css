@@ -17,8 +17,7 @@ body, input, textarea {
 .container {
     max-width: 25em;
     margin: 2em auto;
-    width: 95%;
-     
+    width: 95%;     
 }
  
 .title {
@@ -28,4 +27,8 @@ body, input, textarea {
     background: #323a45;
     color: white;
     border-radius: 5px 5px 0 0;
+}
+
+.label {
+    width: 50; 
 }
