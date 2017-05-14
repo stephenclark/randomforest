@@ -13,7 +13,7 @@
     <section class="container">
         <!-- <legend>RANDOM FOREST</legend> -->
 
-    {{err_message}}
+    <div class="validation">{{HTMLParser.HTMLParser().unescape(err_message)}}<div>
 
      Predicted result: {{model_result[0]}} with a certenty of {{model_result[1]}}
 

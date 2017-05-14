@@ -30,6 +30,11 @@ body, input, textarea {
     border-radius: 5px 5px 0 0;
 }
 
+.validation{
+    border: 1px solid #ff0000 !important;
+    background-color: #ffeeee !important;
+}
+
 .description {
     display: inline-block;
     width: 50px; 
