@@ -29,8 +29,8 @@ body, input, textarea {
     border-radius: 5px 5px 0 0;
 }
 
-label {
-    width: 50; 
+.description {
+    width: 100; 
 }
 
 input[type="submit"] {
