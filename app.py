@@ -44,6 +44,17 @@ def show_the_result():
     if get_prediction:
         a = []
         for value in FORM_VARS:
+            if not is_int(result[value]):
+                result[value] = result[value].upper()
+                if result[value] == 'L':
+                    result[value] = 0
+                elif result[value] == 'N':
+                    result[value] = 1
+                elif result[value] == 'H':
+                    result[value] = 2
+                else:
+                    err_message += "Value for "+value+" was "+result[value]+". Value must be int, 'L', 'N', or 'H'. Assumed to be N<br />"
+            
             a.append(result[value])
 
         filename='finalized_model.sav'
