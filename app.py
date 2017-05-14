@@ -59,6 +59,8 @@ def show_the_result():
             
             a.append(this_result)
 
+        print(a, file=sys.stderr)
+
         filename='finalized_model.sav'
         clf = pickle.load(open(filename, 'rb'))
         # place prediction and probability in array and pass to html form template
