@@ -21,7 +21,7 @@ def show_the_result():
     result = request.form
     model_result = [0, 0.92]
 
-    return render_template("result.html",result = result, form_vars = form_vars, model_result)
+    return render_template("result.html",result = result, form_vars = form_vars, model_result = model_result)
 
 
 
