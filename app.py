@@ -4,7 +4,7 @@ run them against a pre built random forest machine learnign model
 Stephen Kennedy-Clark
 13 May 2017
 """
-from __future__ import print_function # In python 2.7
+.from __future__ import print_function # In python 2.7
 import sys
 
 import HTMLParser
@@ -61,7 +61,9 @@ def show_the_result():
                 else:
                     err_message += "Value for "+value+" was "+result[value]+". Value must be int, 'L', 'N', or 'H'. Assumed to be N<br />"
                     this_result = 1
-            
+            elif:
+                this_result = int(result[value])
+
             a.append(this_result)
 
         print(a, file=sys.stderr)
