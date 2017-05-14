@@ -34,7 +34,7 @@ def show_the_result():
     result = request.form
     err_message = ""
     get_prediction = True
-    model_result = ['data not valid','data not valid']
+    model_result = ['data not valid', 'data not valid']
 
     for value in FORM_VARS:
         if len(result[value]) == 0:
@@ -44,7 +44,7 @@ def show_the_result():
     if get_prediction:
         a = []
         for value in FORM_VARS:
-            if not is_int(result[value]):
+            if not result[value].isdigit():
                 result[value] = result[value].upper()
                 if result[value] == 'L':
                     result[value] = 0
