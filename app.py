@@ -11,18 +11,23 @@ def index():
     else:
         return show_the_form()
   
+#   First time we get to the page just show an empty form 
+def show_the_form():
+    return render_template('form.html', form_vars = form_vars)
+
+
+#   As this is a POST return - show results and pre populate the form  
+def show_the_result():
+    result = request.form
+    model_result = [0, 0.92]
+
+    return render_template("result.html",result = result, form_vars = form_vars, model_result)
+
+
 
 #@app.route('/random_forest')
 #def hello():
 #    return 'training info here'
-
-def show_the_form():
-    return render_template('form.html', form_vars = form_vars)
-
-def show_the_result():
-    result = request.form
-    return render_template("result.html",result = result, form_vars = form_vars)
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug = True)
