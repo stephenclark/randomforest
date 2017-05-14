@@ -18,21 +18,18 @@
         <h3>Provide values for VAR1-VAR10</h3>
       </div>
 
-      <ul>
+      
         {% for value in form_vars %}
-        <li id="li_{{value}}">
+        <div>
           <label class="description" for="{{value}}">{{value}}</label>
-          <div>
-            <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="" />
-          </div>
-        </li>
+          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="" />
+        </div>
         {% endfor %}
 
 
-        <li class="buttons"><input type="hidden" name="form_id" value="30571" />
-        <input id="saveForm" class="button_text" type="submit" name="submit" value=
-        "Submit" /></li>
-      </ul>
+        <li class="buttons">
+        <input id="saveForm" class="button_text"  rform='random_forest_form' type="submit" value="Submit" /></li>
+      
     </form>
      </fieldset>
   </div>
