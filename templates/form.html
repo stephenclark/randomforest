@@ -8,9 +8,7 @@
 </head>
 
 <body id="main_body">
-  {% for value in form_vars %}
-    {{ value }}}
-  {% endfor %}
+  
   <div id="form_container">
     <fieldset>
         <legend>RANDOM FOREST</legend>
@@ -21,95 +19,15 @@
       </div>
 
       <ul>
-        <li id="li_1">
-          <label class="description" for="VAR1">VAR1</label>
-
+        {% for value in form_vars %}
+        <li id="li_{{ value }}">
+          <label class="description" for="{{ value }}"></label>
           <div>
-            <input id="VAR1" name="VAR1" class="element text medium" type=
-            "text" maxlength="255" value="" />
+            <input id="{{ value }}" name="{{ value }}" class="description" type="text" maxlength="255" value="" />
           </div>
         </li>
+        {% endfor %}
 
-        <li id="li_2">
-          <label class="description" for="VAR2">VAR2</label>
-
-          <div>
-            <input id="VAR2" name="VAR2" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_3">
-          <label class="description" for="VAR3">VAR3</label>
-
-          <div>
-            <input id="VAR3" name="VAR3" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_4">
-          <label class="description" for="VAR4">VAR4</label>
-
-          <div>
-            <input id="VAR4" name="VAR4" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_5">
-          <label class="description" for="VAR5">VAR5</label>
-
-          <div>
-            <input id="VAR5" name="VAR5" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_6">
-          <label class="description" for="VAR6">VAR6</label>
-
-          <div>
-            <input id="VAR6" name="VAR6" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_7">
-          <label class="description" for="VAR7">VAR7</label>
-
-          <div>
-            <input id="VAR7" name="VAR7" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_8">
-          <label class="description" for="VAR8">VAR8</label>
-
-          <div>
-            <input id="VAR8" name="VAR8" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_9">
-          <label class="description" for="VAR9">VAR9</label>
-
-          <div>
-            <input id="VAR9" name="VAR9" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
-
-        <li id="li_10">
-          <label class="description" for="VAR10">VAR10</label>
-
-          <div>
-            <input id="VAR10" name="VAR10" class="element text medium" type=
-            "text" maxlength="255" value="" />
-          </div>
-        </li>
 
         <li class="buttons"><input type="hidden" name="form_id" value="30571" />
         <input id="saveForm" class="button_text" type="submit" name="submit" value=
