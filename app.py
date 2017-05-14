@@ -61,7 +61,7 @@ def show_the_result():
                 else:
                     err_message += "Value for "+value+" was "+result[value]+". Value must be int, 'L', 'N', or 'H'. Assumed to be N<br />"
                     this_result = 1
-            elif:
+            else:
                 this_result = int(result[value])
 
             a.append(this_result)
