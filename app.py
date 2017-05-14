@@ -32,7 +32,7 @@ def show_the_result():
     result = request.form
     err_message = ""
 
-    for value in form_vars:
+    for value in FORM_VARS:
         if len(result[value]) == 0:
             err_message += "Please provide a value for " + value + "<br />"
 
