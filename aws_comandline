@@ -23,3 +23,5 @@ ssh -i ~/.ssh/MyEC2Key.pem ubuntu@
 
 cd /Users/stephenkennedy-clark/Documents/Steve/programming/maquarie_job_app 
 tail  -n100 /var/log/cloud-init-output.log
+sudo lsof -i:80
+sudo kill

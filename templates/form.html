@@ -20,10 +20,10 @@
 
       <ul>
         {% for value in form_vars %}
-        <li id="li_{{ value }}">
-          <label class="description" for="{{ value }}"></label>
+        <li id="li_{{value}}">
+          <label class="description" for="{{value}}">{{value}}</label>
           <div>
-            <input id="{{ value }}" name="{{ value }}" class="description" type="text" maxlength="255" value="" />
+            <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="" />
           </div>
         </li>
         {% endfor %}
