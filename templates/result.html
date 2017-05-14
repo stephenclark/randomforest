@@ -22,7 +22,7 @@
         {% for value in form_vars %}
         <div>
           <label class="description" for="{{value}}">{{value}}</label>
-          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="{{result['VAR1']}}" />
+          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="{{result[value]}}" />
         </div>
         {% endfor %}
 
