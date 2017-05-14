@@ -8,6 +8,9 @@
 </head>
 
 <body id="main_body">
+  {% for value in form_vars.iteritems() %}
+    {{ value }}}
+  {% endfor %}
   <div id="form_container">
     <fieldset>
         <legend>RANDOM FOREST</legend>
