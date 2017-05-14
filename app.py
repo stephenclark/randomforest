@@ -44,7 +44,7 @@ def show_the_result():
     if get_prediction:
         a = []       
         for value in FORM_VARS:
-             this_result = ""
+            this_result = ""
             if not result[value].isdigit():
                 this_result = result[value].upper()
                 if result[value] == 'L':
