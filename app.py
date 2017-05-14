@@ -53,7 +53,7 @@ def show_the_result():
         # so if prediction is for 0 we want the first member of probability array
         # if 1 we want toe second. 
         prediction = clf.predict(a)
-        probability = clf.predict_proba(a)[0,clf.predict(a)
+        probability = clf.predict_proba(a)[0,clf.predict(a)]
         model_result = [prediction, probability]
 
     return render_template("result.html", \
