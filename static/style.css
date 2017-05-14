@@ -31,7 +31,7 @@ body, input, textarea {
 
 .description {
     display: inline-block;
-    width: 100; 
+    width: 100px; 
 }
 
 input[type="submit"] {
