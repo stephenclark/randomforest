@@ -31,7 +31,7 @@ git clone https://github.com/stephenclark/randomforest.git
 mysql  -u root -pveryrandompassword < randomforest/create_db.SQL
 
 echo "Train the random forest model"
-randomforest/
+cd randomforest/
 python train_rf_model.py
 
 # Copy startup logs to home to make for easy debugging
