@@ -21,7 +21,7 @@ def show_the_form():
 
 def show_the_result():
     result = request.form
-    return render_template("result.html",result = result)
+    return render_template("result.html",result = result, form_vars = form_vars)
 
 
 if __name__ == '__main__':
