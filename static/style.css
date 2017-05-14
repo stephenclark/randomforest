@@ -32,3 +32,23 @@ body, input, textarea {
 .label {
     width: 50; 
 }
+
+input[type="submit"] {
+    background: #f1773b;
+    margin-bottom: 1em;
+    color: white;
+    border-radius: 3px;
+    padding: .75em;
+    -webkit-appearance: none; /* remove default browser <button> styling */
+    -webkit-transition: .333s ease -webkit-transform;
+    transition: .333s ease transform;
+}
+input[type="submit"]:hover {
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+input[type="submit"]:active {
+    -webkit-transform: scale(.975);
+    transform: scale(.975);
+}
