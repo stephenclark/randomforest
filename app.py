@@ -33,7 +33,7 @@ def show_the_result():
     """PostBackm displays prepopulated HTML form and prediction """
     result = request.form
     err_message = ""
-    get_prediction = true
+    get_prediction = True
     model_result = ['data not valid','data not valid']
 
     for value in FORM_VARS:
