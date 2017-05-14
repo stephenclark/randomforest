@@ -4,8 +4,9 @@ run them against a pre built random forest machine learnign model
 Stephen Kennedy-Clark
 13 May 2017
 """
-import HTMLParser
+import HTMLParser pickle
 from flask import Flask, render_template, request
+
 
 
 app = Flask(__name__)
@@ -31,12 +32,29 @@ def show_the_result():
     """PostBackm displays prepopulated HTML form and prediction """
     result = request.form
     err_message = ""
+    get_prediction = true
+    model_result = ['data not valid','data not valid']
 
     for value in FORM_VARS:
         if len(result[value]) == 0:
+            get_prediction = False
             err_message += "Please provide a value for " + value + "<br />"
+    
+    if get_prediction:
+        a = []
+        for value in FORM_VARS:
+            a.append(result[value])
 
-    model_result = [0, 0.92]
+        filename='finalized_model.sav'
+        clf = pickle.load(open(filename, 'rb'))
+        # place prediction and probability in array and pass to html form template
+        # prediction is either 0 or 1, probability is 2nd member of 2D array, prob of 0, prob of 1
+        # so if prediction is for 0 we want the first member of probability array
+        # if 1 we want toe second. 
+        prediction = clf.predict(a)
+        probability = clf.predict_proba(a)[0,clf.predict(a)
+        model_result = [prediction, probability]
+
     return render_template("result.html", \
                                     result=result, \
                                     form_vars=FORM_VARS, \
