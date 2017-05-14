@@ -4,7 +4,7 @@ run them against a pre built random forest machine learnign model
 Stephen Kennedy-Clark
 13 May 2017
 """
-.from __future__ import print_function # In python 2.7
+#from __future__ import print_function # In python 2.7
 import sys
 
 import HTMLParser
