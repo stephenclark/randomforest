@@ -17,7 +17,7 @@ def index():
 #    return 'training info here'
 
 def show_the_form():
-    return render_template('form.html', form_vars)
+    return render_template('form.html', form_vars = form_vars)
 
 def show_the_result():
     result = request.form
