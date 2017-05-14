@@ -23,7 +23,7 @@ def show_the_result():
 
     for value in form_vars:
         if len(result[value]) == 0:
-            err_message += "Please provide a value for " + result[value] + "<br />"
+            err_message += "Please provide a value for " + result[value] + "/n"
     
     model_result = [0, 0.92]
 
