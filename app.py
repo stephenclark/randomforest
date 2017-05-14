@@ -42,20 +42,22 @@ def show_the_result():
             err_message += "Please provide a value for " + value + "<br />"
     
     if get_prediction:
-        a = []
+        a = []       
         for value in FORM_VARS:
+             this_result = ""
             if not result[value].isdigit():
-                result[value] = result[value].upper()
+                this_result = result[value].upper()
                 if result[value] == 'L':
-                    result[value] = 0
+                    this_result = 0
                 elif result[value] == 'N':
-                    result[value] = 1
+                    this_result = 1
                 elif result[value] == 'H':
-                    result[value] = 2
+                    this_result = 2
                 else:
                     err_message += "Value for "+value+" was "+result[value]+". Value must be int, 'L', 'N', or 'H'. Assumed to be N<br />"
+                    this_result = 1
             
-            a.append(result[value])
+            a.append(this_result)
 
         filename='finalized_model.sav'
         clf = pickle.load(open(filename, 'rb'))
