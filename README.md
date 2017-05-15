@@ -5,14 +5,14 @@ This application was written by Stephen Kennedy-Clark for Maquarie University
 The submission consists of:
 
 * Simple two table MySQL database.
-* Python script "train_rf_model.py" that reads from the database and then trains a Random Forest Classifier against the data. It saves the trained model as a binary "finalized_model.sav"
+* Python script "train_rf_model.py" that reads from the database and then trains a Random Forest Classifier against the data. It saves the trained model as a binary "finalized_model.sav".
 * Flask web form that takes 10 inputs for Vars's 1->10 and runs them against the saved
 Classifier. The Flask app runs on port 80.
-* Also included are a bash and SQL script to stand up the application on Ubuntu linux
+* Also included are a bash and SQL script to stand up the application on Ubuntu linux.
 
 ## Setting up the application
 
-The application runs on Python 2.7
+The application runs on Python 2.7.
 
 The application needs the following Python modules:
 
@@ -24,9 +24,9 @@ The application needs the following Python modules:
 * scipy
 * pickle (should already be included in Python)
 
-These are most easily installed with pip
+These are most easily installed with pip.
 
-The application requires an instance of MySQL
+The application requires an instance of MySQL,
 it assumes:
 
 * database name = 'mq_random_forest'
@@ -34,7 +34,7 @@ it assumes:
 * password =  'veryrandompassword'
 
 If you already have an instance of the Database up and running edit the credentials on
-line 13. of "train_rf_model.py"
+line 13. of "train_rf_model.py".
 
 The application can be cloned from:
 
@@ -42,7 +42,7 @@ The application can be cloned from:
 git clone https://github.com/stephenclark/randomforest.git
 ```
 
-## starting the application
+## Starting the application
 
 From the application directory first run 'train_rf_model.py' to train the model
 then start the flask application 'app.py'. To run the application on a port other
@@ -56,7 +56,7 @@ python app.py
 ## Setting up the application on AWS
 
 I use the the included script 'awsscript_ubuntu.sh' to stand up an instance of the site on
-an AWS ec2 instance of Ubuntu
+an AWS ec2 Ubuntu server.
 
 The script builds a new machine, gets the latest code from github, creates the database, runs the
 training model and finally starts the website.
