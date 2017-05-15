@@ -52,11 +52,11 @@ def show_the_result():
             this_result = ""
             if not result[value].isdigit():
                 this_result = result[value].upper()
-                if result[value] == 'L':
+                if rthis_result == 'L':
                     this_result = 0
-                elif result[value] == 'N':
+                elif this_result == 'N':
                     this_result = 1
-                elif result[value] == 'H':
+                elif this_result == 'H':
                     this_result = 2
                 else:
                     err_message += "Value for "+value+" was "+result[value]+". Value must be int, 'L', 'N', or 'H'. Assumed to be N<br />"
