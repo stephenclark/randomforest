@@ -1,6 +1,6 @@
 """
 Simple flask app to capture 10 variables in a form and
-run them against a pre built random forest machine learnign model
+run them against a pre built random forest machine learning model
 Stephen Kennedy-Clark
 13 May 2017
 """
@@ -35,7 +35,7 @@ def show_the_form():
 
 
 def show_the_result():
-    """PostBackm displays prepopulated HTML form and prediction """
+    """PostBack displays prepopulated HTML form and prediction """
     result = request.form
     err_message = ""
     get_prediction = True
@@ -52,7 +52,7 @@ def show_the_result():
             this_result = ""
             if not result[value].isdigit():
                 this_result = result[value].upper()
-                if rthis_result == 'L':
+                if this_result == 'L':
                     this_result = 0
                 elif this_result == 'N':
                     this_result = 1

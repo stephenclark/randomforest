@@ -1,8 +1,7 @@
 <!doctype html>
 <html >
 <head>
-  <meta name="author" content=
-  "Stephen Kennedy-Clark" />
+  <meta name="author" content= "Stephen Kennedy-Clark" />
   <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
   <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
   <title>RANDOM FOREST</title>
@@ -16,7 +15,7 @@
 
     <div class="validation">{{err_message}}<div>
 
-     Predicted result: {{model_result[0]}} with a certenty of {{model_result[1]}}
+     Predicted result: {{model_result[0]}} with a probability of {{model_result[1]}}
 
     <form id="random_forest_form" method="post" action="/">
       <div class="form_description">
@@ -30,6 +29,7 @@
           <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="{{result[value]}}" />
         </div>
         {% endfor %}
+
 
        <br />
        <input id="saveForm" class="button_text"  rform='random_forest_form' type="submit" value="Submit" /></li>
