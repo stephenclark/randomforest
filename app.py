@@ -9,7 +9,7 @@ import sys
 
 import HTMLParser
 import pickle
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Markup
 
 
 
@@ -78,7 +78,8 @@ def show_the_result():
         prediction = clf.predict(a)
         probability = clf.predict_proba(a)[0,clf.predict(a)]
         model_result = [prediction, probability]
-
+        
+    err_message = Markup(err_message)
     return render_template("result.html", \
                                     result=result, \
                                     form_vars=FORM_VARS, \

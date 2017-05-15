@@ -40,6 +40,10 @@ body, input, textarea {
     width: 50px; 
 }
 
+input[type="text"]{
+    text-transform: uppercase;
+}
+
 input[type="submit"] {
     background: #f1773b;
     margin-bottom: 1em;
