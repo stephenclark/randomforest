@@ -6,8 +6,7 @@ The submission consists of:
 
 * Simple two table MySQL database.
 * Python script "train_rf_model.py" that reads from the database and then trains a Random Forest Classifier against the data. It saves the trained model as a binary "finalized_model.sav".
-* Flask web form that takes 10 inputs for Vars's 1->10 and runs them against the saved
-Classifier. The Flask app runs on port 80.
+* Flask web form that takes 10 inputs for Vars's 1->10 and runs them against the saved Classifier. The Flask app runs on port 80.
 * Also included are a bash and SQL script to stand up the application on Ubuntu linux.
 
 ## Setting up the application
