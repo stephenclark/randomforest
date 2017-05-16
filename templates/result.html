@@ -6,39 +6,28 @@
   <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
   <title>RANDOM FOREST</title>
 </head>
-
 <body id="main_body">
   <h1 class="title">Random Forest</h1>
   <div id="form_container">
     <section class="container">
-        <!-- <legend>RANDOM FOREST</legend> -->
-
     <div class="validation">{{err_message}}<div>
-
      Predicted result: {{model_result[0]}} with a probability of {{model_result[1]}}
-
     <form id="random_forest_form" method="post" action="/">
       <div class="form_description">
         <h3>Provide values for VAR1-VAR10</h3>
-      </div>
-
-      
+      </div>      
         {% for value in form_vars %}
         <div>
           <label class="description" for="{{value}}">{{value}}</label>
-          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" value="{{result[value]}}" />
+          <input id="{{value}}" name="{{value}}" class="description" type="text" maxlength="255" onkeydown="upperCase(this)" value="{{result[value]}}" />
         </div>
         {% endfor %}
-
-
-       <br />
-       <input id="saveForm" class="button_text"  rform='random_forest_form' type="submit" value="Submit" /></li>
-      
+        <br />
+          <input id="saveForm" class="button_text"  rform='random_forest_form' type="submit" value="Submit" /></li>
+        <br />
+        <a href="{{ url_for('static', filename='mq-randomforest.html') }}" target="_blank">Feature Importance Rank, ROC curve and comparision with other modles.</a>      
     </form>
-     </section>
-     <a href="{{ url_for('static', filename='mq-randomforest.html') }}" target="_blank">Feature Importance Rank, ROC curve and comparision with other modles.</a>
-    
-
+  </section>
   </div>
 </body>
 </html>

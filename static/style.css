@@ -40,6 +40,9 @@ body, input, textarea {
     width: 60px; 
 }
 
+a {
+    text-align: center; 
+}
 
 input[type="text"]{
     text-transform: uppercase;

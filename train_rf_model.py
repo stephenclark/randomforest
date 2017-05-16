@@ -38,29 +38,5 @@ clf.fit(X_train, y_train)
 filename='finalized_model.sav'
 pickle.dump(clf, open(filename, 'wb'))
 
-
 #straight away lets get the model back again and test it all worked
 clf = pickle.load(open(filename, 'rb'))
-
-
-#Lets see how good our model is
-predictions=clf.predict(X_test)
-
-print "training set" , len(y_train)
-print "test set" , len(y_test)
-pd.crosstab(predictions, y_test.as_matrix(), rownames=['Actual'], colnames=['Predicted'])
-
-#Feature Importance
-list(zip(X_train, clf.feature_importances_))
-
-# lets look at some sample test data:
-
-a = [[67, 2, 0, 1, 3, 1, 3, 2, 1, 2]] # 1
-b = [[86, 0, 0, 2, 2, 2, 2, 2, 2, 2]] # 1
-c = [[30, 0, 27, 2, 2, 2, 2, 2, 2, 2]] # 0
-d = [[84, 0, 0, 2, 3, 2, 2, 2, 2, 2]] # 1
-     
-print 'predicted:', clf.predict(a), 'expecting 1', 'with probability of :', clf.predict_proba(a)[0,clf.predict(a)]
-print 'predicted:', clf.predict(b), 'expecting 1', 'with probability of :', clf.predict_proba(b)[0,clf.predict(b)]
-print 'predicted:', clf.predict(c), 'expecting 0', 'with probability of :', clf.predict_proba(c)[0,clf.predict(c)]
-print 'predicted:', clf.predict(d), 'expecting 1', 'with probability of :', clf.predict_proba(d)[0,clf.predict(d)]

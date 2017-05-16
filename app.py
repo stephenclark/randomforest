@@ -4,23 +4,17 @@ run them against a pre built random forest machine learning model
 Stephen Kennedy-Clark
 13 May 2017
 """
-from __future__ import print_function # In python 2.7
 import sys
 
 import HTMLParser
 import pickle
 from flask import Flask, render_template, request, Markup
 
-
-
-
-
 app = Flask(__name__)
 
 FORM_VARS = ["VAR1", " VAR2", "VAR3", "VAR4", "VAR5", "VAR6", "VAR7", "VAR8", "VAR9", "VAR10"]
 
 @app.route('/', methods=['GET', 'POST'])
-
 
 def index():
     """default route, detects isPostBack and displays either blank form  or results"""
@@ -66,9 +60,6 @@ def show_the_result():
 
             a.append(this_result)
         
-        #TODO: remove following line and lines 7 and 8
-        print(a, file=sys.stderr)
-
         filename='finalized_model.sav'
         clf = pickle.load(open(filename, 'rb'))
         # place prediction and probability in array and pass to html form template
@@ -86,9 +77,6 @@ def show_the_result():
                                     model_result=model_result, \
                                     err_message=err_message)
 
-#@app.route('/random_forest')
-#def hello():
-#    return 'training info here'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
